@@ -64,7 +64,6 @@ html{
 #landing-buttons-div {
     width: fit-content;
     margin: auto;
-    /*background-color: #087a6f;*/
     margin-top: 5px;
     padding-top: 5px;
     border-radius: 35px;
@@ -76,6 +75,59 @@ html{
     height: 170px;
     width: 170px;
     margin: auto;
-    background-color: wheat;
+    background-color: transparent;
     margin-top: 30px;
+    position: relative;
+}
+.line {
+    top: 0px;
+    position: absolute;
+    background-color: #0da192;
+}
+.board-vertical-line {
+    width: 5px;
+    height: 170px;
+    animation: verticalAnim 1.5s ease-in-out;
+}
+.board-horizontal-line {
+    width: 170px;
+    height: 5px;
+    margin: auto;
+    animation: horizontalAnim 1.5s ease-in-out;
+}
+#vertical-1 {
+    left: 53px;
+}
+#vertical-2 {
+    left: 112px;
+}
+#horizontal-1 {
+    top: 53px;
+}
+#horizontal-2 {
+    top: 112px;
+}
+@keyframes horizontalAnim { 
+    from { 
+        margin-left: 85px;
+        margin-right: 85px;
+        width: 0px;
+    }
+    100% {
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 170px;
+    }
+}
+@keyframes verticalAnim { 
+    from { 
+        margin-top: 85px;
+        margin-bottom: 85px;
+        height: 0px;
+    }
+    100% {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        height: 170px;
+    }
 }
