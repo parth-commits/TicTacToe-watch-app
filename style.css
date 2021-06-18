@@ -1,3 +1,25 @@
+@font-face {
+    font-family: "ManropeBold";
+    src: url("assets/fonts/Manrope-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "ManropeRegular";
+    src: url("assets/fonts/Manrope-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "ManropeMedium";
+    src: url("assets/fonts/Manrope-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "ManropeLight";
+    src: url("assets/fonts/Manrope-Light.ttf") format("truetype");
+}
+@font-face {
+    font-family: "ManropeExtraLight";
+    src: url("assets/fonts/Manrope-ExtraLight.ttf") format("truetype");
+}
 html{
     scroll-behavior: smooth;
 }
@@ -8,4 +30,52 @@ html{
 }
 ::-webkit-scrollbar {
     display: none;
+}
+#landing-page {
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background-color: #14bdac;
+    overflow: hidden;
+}
+#app-title {
+    font-family: 'ManropeLight';
+    color: #087a6f;
+    text-transform: uppercase;
+    margin: auto;
+    width: fit-content;
+    font-size: 50px;
+    padding-top: 0px;
+}
+.landing-buttons {
+    width: 60px;
+}
+.landing-buttons-list {
+    display: inline;
+    width: fit-content;
+    margin: auto;
+}
+.landing-buttons-list li {
+    display: inline;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+}
+#landing-buttons-div {
+    width: fit-content;
+    margin: auto;
+    /*background-color: #087a6f;*/
+    margin-top: 5px;
+    padding-top: 5px;
+    border-radius: 35px;
+}
+.links {
+    text-decoration: none;
+}
+#landing-table {
+    height: 170px;
+    width: 170px;
+    margin: auto;
+    background-color: wheat;
+    margin-top: 30px;
 }
