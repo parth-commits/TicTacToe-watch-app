@@ -131,3 +131,100 @@ html{
         height: 170px;
     }
 }
+.x {
+    position: relative;
+    width: 45px;
+    height: 45px;
+}
+.x-line-1 {
+    height:4px;
+    width:0;
+    background:teal;
+    transform:translateX(1px) rotate(45deg);
+    transform-origin:left;
+    animation:xAnim 0.25s linear forwards;
+}
+@keyframes xAnim{
+    to {width:60px;}
+  }
+.x-line-2 {
+    position: absolute;
+    height:4px;
+    width:0;
+    background:teal;
+    transform:translateX(43px) translateY(-5px) rotate(135deg);
+    transform-origin:left;
+    animation:xAnim 0.25s 0.25s linear forwards;
+}
+.o {
+    width: 45px;
+    height: 45px;
+    border-radius: 22.5px;
+    border-width: 4px;
+    border-color: teal;
+    border-style: solid;
+    background-color: transparent;
+    animation: circleAnim 0.5s ease-in-out;
+}
+@keyframes circleAnim { 
+    from { 
+        opacity: 0.3;
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.tap-box {
+    width: 45px;
+    height: 45px;
+}
+#tap-box-1 {
+    position: absolute;
+    top: 4.166px;
+    left: 4.166px;
+}
+#tap-box-2 {
+    position: absolute;
+    top: 4.166px;
+    left: 62.4993px;
+}
+#tap-box-3 {
+    position: absolute;
+    top: 4.166px;
+    left: 120.8333px;
+}
+#tap-box-4 {
+    position: absolute;
+    top: 62.4993px;
+    left: 4.166px;
+}
+#tap-box-5 {
+    position: absolute;
+    top: 62.4993px;
+    left: 62.4993px;
+}
+#tap-box-6 {
+    position: absolute;
+    top: 62.4993px;
+    left: 120.8333px;
+}
+#tap-box-7 {
+    position: absolute;
+    top: 120.8333px;
+    left: 4.166px;
+}
+#tap-box-8 {
+    position: absolute;
+    top: 120.8333px;
+    left: 62.4993px;
+}
+#tap-box-9 {
+    position: absolute;
+    top: 120.8333px;
+    left: 120.8333px;
+}
