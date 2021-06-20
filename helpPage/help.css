@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "ManropeBold";
+    src: url("../assets/fonts/Manrope-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "ManropeRegular";
+    src: url("../assets/fonts/Manrope-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "ManropeMedium";
+    src: url("../assets/fonts/Manrope-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "ManropeLight";
+    src: url("../assets/fonts/Manrope-Light.ttf") format("truetype");
+}
+@font-face {
+    font-family: "ManropeExtraLight";
+    src: url("../assets/fonts/Manrope-ExtraLight.ttf") format("truetype");
+}
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+#help-page {
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background-color: #14bdac;
+    overflow: hidden;
+}
+#help-button {
+    width: 60px;
+    margin: auto;
+    margin-top: 10px;
+}
+#help-button-img {
+    width: 60px;
+}
+#help-text {
+    font-family: "ManropeMedium";
+    font-size: 22px;
+    color: #087a6f;
+    text-align: center;
+}
