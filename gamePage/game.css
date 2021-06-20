@@ -31,3 +31,48 @@ html{
 ::-webkit-scrollbar {
     display: none;
 }
+#game-page {
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background-color: #14bdac;
+    overflow: hidden;
+}
+#turn-title {
+    font-family: 'ManropeLight';
+    color: #087a6f;
+    margin: auto;
+    width: fit-content;
+    font-size: 30px;
+    padding-top: 7px;
+}
+#game-board {
+    width: 230px;
+    height: 230px;
+    margin: auto;
+    background-color: wheat;
+    margin-top: 10px;
+}
+#score-list {
+    position: relative;
+    top: -11px;
+    width: fit-content;
+    margin: auto;
+}
+#score-list li {
+    width: fit-content;
+    margin: auto;
+    display: inline;
+    
+    font-family: 'ManropeBold';
+    color: #f2ebd3;
+    font-size: 30px;
+}
+#score-name {
+    position: relative;
+    font-family: 'ManropeRegular';
+    color: #087a6f;
+    font-size: 25px;
+    width: fit-content;
+    margin: auto;
+}
