@@ -288,3 +288,91 @@ html{
         opacity: 1;
     }
 }
+.board-horizontal-strike-line {
+    width: 0px;
+    height: 7px;
+}
+.strike {
+    top: 0px;
+    position: absolute;
+    background-color: white;
+}
+#horizontal-strike-1 {
+    top: 33.1665px;
+    width: 230px;
+    animation: horizontalStrikeAnim 0.5s ease-in-out;
+}
+#horizontal-strike-2 {
+    top: 111.45px;
+    width: 230px;
+    animation: horizontalStrikeAnim 0.5s ease-in-out;
+}
+#horizontal-strike-3 {
+    top: 189.833px;
+    width: 230px;
+    animation: horizontalStrikeAnim 0.5s ease-in-out;
+}
+@keyframes horizontalStrikeAnim { 
+    from { 
+        width: 0px;
+    }
+    100% {
+        width: 230px;
+    }
+}
+
+.board-vertical-strike-line {
+    width: 7px;
+    height: 0px;
+}
+#vertical-strike-1 {
+    left: 33.1665px;
+    height: 230px;
+    animation: verticalStrikeAnim 0.5s ease-in-out;
+}
+#vertical-strike-2 {
+    left: 111.45px;
+    height: 230px;
+    animation: verticalStrikeAnim 0.5s ease-in-out;
+}
+#vertical-strike-3 {
+    left: 189.833px;
+    height: 230px;
+    animation: verticalStrikeAnim 0.5s ease-in-out;
+}
+@keyframes verticalStrikeAnim { 
+    from { 
+        height: 0px;
+    }
+    100% {
+        height: 230px;
+    }
+}
+
+
+
+
+.board-diagonal-strike-line {
+    width: 0px;
+    height: 7px;
+}
+#diagonal-strike-1 {
+    width: 0;
+    transform-origin:left;
+    transform:translateX(2px) translateY(-1px) rotate(45deg);
+    animation:diagonalStrikeAnim 0.5s linear forwards;
+}
+#diagonal-strike-2 {
+    width: 0;
+    transform-origin:left;
+    transform:translateX(223.5px) translateY(2px) rotate(135deg);
+    animation:diagonalStrikeAnim 0.5s linear forwards;
+}
+@keyframes diagonalStrikeAnim { 
+    from { 
+        width: 0px;
+    }
+    100% {
+        width: 310px;
+    }
+}
