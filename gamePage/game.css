@@ -256,3 +256,19 @@ html{
     top: 160.8333px;
     left: 160.8333px;
 }
+@keyframes rotateToO {
+    from { 
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+@keyframes rotateToX {
+    from { 
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}

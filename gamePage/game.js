@@ -34,10 +34,15 @@ let xScore = document.getElementById('x-score');
 // o score element
 let oScore = document.getElementById('o-score');
 
+// main thing
+let page = document.getElementById('game-page');
+
+
+
 
 
 // On click function
-function clicked(num) {
+async function clicked(num) {
     const col = num % 3;
     const row = Math.floor(num/3);
 
@@ -45,11 +50,12 @@ function clicked(num) {
         boxes[num].appendChild(turnElem);
         board[row][col] = turn;
         if (isWinner(turn)) {
+            await new Promise(r => setTimeout(r, 2000));
             increaseScore(turn);
             deleteAllInput();
-            turn = 'x';
-            turnElem = x.cloneNode(true);
         } else {
+            await new Promise(r => setTimeout(r, 400));
+            rotateBoard(turn);
             if (turn === 'x') {
                 turn = 'o';
                 turnElem = o.cloneNode(true);
@@ -76,7 +82,6 @@ async function deleteAllInput() {
 }
 
 // checks if there is a winner, returns true if there is, else false
-// delete later: board[row][column]
 function isWinner(turn) {
     if (board[0][0] === board[0][1] && board[0][0] === board[0][2] && board[0][0] === turn) {
         console.log("1");
@@ -113,5 +118,16 @@ function increaseScore (turn) {
         xScore.innerHTML = parseInt(xScore.innerHTML) + 1;
     } else {
         oScore.innerHTML = parseInt(oScore.innerHTML) + 1;
+    }
+}
+
+// turn board
+function rotateBoard(turn) {
+    if (turn === 'x') {
+        page.style.animation = "rotateToO 1s ease-in-out";
+        page.style.animationFillMode = "forwards";
+    } else {
+        page.style.animation = "rotateToX 1s ease-in-out";
+        page.style.animationFillMode = "forwards";
     }
 }
