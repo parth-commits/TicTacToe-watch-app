@@ -50,7 +50,7 @@ html{
     width: 230px;
     height: 230px;
     margin: auto;
-    background-color: wheat;
+    background-color: transparent;
     margin-top: 10px;
 }
 #score-list {
@@ -75,4 +75,184 @@ html{
     font-size: 25px;
     width: fit-content;
     margin: auto;
+}
+.x {
+    position: relative;
+    width: 65px;
+    height: 65px;
+}
+.x-line-1 {
+    height:8px;
+    width:0;
+    background:#545454;
+    transform:translateX(2px) translateY(-1px) rotate(45deg);
+    transform-origin:left;
+    animation:xAnim 0.25s linear forwards;
+}
+@keyframes xAnim{
+    to {width:84px;}
+  }
+.x-line-2 {
+    position: absolute;
+    height:8px;
+    width:0;
+    background:#545454;
+    transform:translateX(62px) translateY(-10px) rotate(135deg);
+    transform-origin:left;
+    animation:xAnim 0.25s 0.25s linear forwards;
+}
+.o {
+    width: 65px;
+    height: 65px;
+    border-radius: 32.5px;
+    border-width: 8px;
+    border-color: #f2ebd3;
+    border-style: solid;
+    background-color: transparent;
+    animation: circleAnim 0.5s ease-in-out;
+}
+@keyframes circleAnim { 
+    from { 
+        opacity: 0.3;
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+#landing-table {
+    width: 230px;
+    height: 230px;
+    margin: auto;
+    background-color: transparent;
+    margin-top: 10px;
+    position: relative;
+}
+.line {
+    top: 0px;
+    position: absolute;
+    background-color: #0da192;
+}
+.board-vertical-line {
+    width: 5px;
+    height: 230px;
+    animation: verticalAnim 1s ease-out;
+}
+.board-horizontal-line {
+    width: 230px;
+    height: 5px;
+    margin: auto;
+    animation: horizontalAnim 1s ease-out;
+}
+.board-horizontal-strike-line {
+    width: 0px;
+    height: 5px;
+}
+.strike {
+    top: 0px;
+    position: absolute;
+    background-color: #087a6f;
+}
+#horizontal-strike-2 {
+    top: 83px;
+    width: 170px;
+    animation: horizontalStrikeAnim 0.5s ease-in-out;
+}
+@keyframes horizontalStrikeAnim { 
+    from { 
+        width: 0px;
+    }
+    100% {
+        width: 230px;
+    }
+}
+#vertical-1 {
+    left: 73.3333px;
+}
+#vertical-2 {
+    left: 151.6666px;
+}
+#horizontal-1 {
+    top: 73.3333px;
+}
+#horizontal-2 {
+    top: 151.6666px;
+}
+@keyframes horizontalAnim { 
+    from { 
+        margin-left: 115px;
+        margin-right: 115px;
+        width: 0px;
+    }
+    100% {
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 230px;
+    }
+}
+@keyframes verticalAnim { 
+    from { 
+        margin-top: 115px;
+        margin-bottom: 115px;
+        height: 0px;
+    }
+    100% {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        height: 230px;
+    }
+}
+.tap-box {
+    width: 65px;
+    height: 65px;
+    background-color: transparent;
+}
+#tap-box-1 {
+    position: absolute;
+    top: 4.166px;
+    left: 4.166px;
+}
+#tap-box-2 {
+    position: absolute;
+    top: 4.166px;
+    left: 82.4999px;
+}
+#tap-box-3 {
+    position: absolute;
+    top: 4.166px;
+    left: 160.8333px;
+}
+#tap-box-4 {
+    position: absolute;
+    top: 82.4999px;
+    left: 4.166px;
+}
+#tap-box-5 {
+    position: absolute;
+    top: 82.4999px;
+    left: 82.4999px;
+}
+#tap-box-6 {
+    position: absolute;
+    top: 82.4999px;
+    left: 160.8333px;
+}
+#tap-box-7 {
+    position: absolute;
+    top: 160.8333px;
+    left: 4.166px;
+}
+#tap-box-8 {
+    position: absolute;
+    top: 160.8333px;
+    left: 82.4999px;
+}
+#tap-box-9 {
+    position: absolute;
+    top: 160.8333px;
+    left: 160.8333px;
 }

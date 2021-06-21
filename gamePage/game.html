@@ -10,7 +10,23 @@
   <body>
     <div id="game-page">
         <h1 id="turn-title">Your turn</h1>
-        <div id="game-board"></div>
+        <div id="landing-table">
+          <div class="board-vertical-line line" id="vertical-1"></div>
+          <div class="board-vertical-line line" id="vertical-2"></div>
+          <div class="board-horizontal-line line" id="horizontal-1"></div>
+          <div class="board-horizontal-line line" id="horizontal-2"></div>
+          <div class="tap-box" id="tap-box-9" onclick="clicked(0)"></div>
+          <div class="tap-box" id="tap-box-1" onclick="clicked(1)"></div>
+          <div class="tap-box" id="tap-box-2" onclick="clicked(2)"></div>
+          <div class="tap-box" id="tap-box-3" onclick="clicked(3)"></div>
+          <div class="tap-box" id="tap-box-4" onclick="clicked(4)"></div>
+          <div class="tap-box" id="tap-box-5" onclick="clicked(5)"></div>
+          <div class="tap-box" id="tap-box-6" onclick="clicked(6)"></div>
+          <div class="tap-box" id="tap-box-7" onclick="clicked(7)"></div>
+          <div class="tap-box" id="tap-box-8" onclick="clicked(8)"></div>
+          
+      </div>
+        <!--<div id="game-board"></div>-->
         <div id="score-name">X - O</div>
         <ul id="score-list">
           <li id="x-score">100</li>
@@ -18,5 +34,10 @@
           <li id="o-score">200</li>
         </ul>
     </div>
+    <div class="x">
+      <div class="x-line-1"></div>
+      <div class="x-line-2"></div>
+    </div>
+    <div class="o"></div>
     <script src="game.js"></script>
   </body>
