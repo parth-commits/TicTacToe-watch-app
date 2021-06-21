@@ -37,7 +37,40 @@ let oScore = document.getElementById('o-score');
 // main thing
 let page = document.getElementById('game-page');
 
+// html board
+let gameTable = document.getElementById('landing-table');
 
+// the board lines
+let vertical1 = document.createElement('div');
+vertical1.classList.add('board-vertical-line');
+vertical1.classList.add('line');
+vertical1.id = 'vertical-1';
+
+let vertical2 = document.createElement('div');
+vertical2.classList.add('board-vertical-line');
+vertical2.classList.add('line');
+vertical2.id = 'vertical-2';
+
+let horizontal1 = document.createElement('div');
+horizontal1.classList.add('board-horizontal-line');
+horizontal1.classList.add('line');
+horizontal1.id = 'horizontal-1';
+
+let horizontal2 = document.createElement('div');
+horizontal2.classList.add('board-horizontal-line');
+horizontal2.classList.add('line');
+horizontal2.id = 'horizontal-2';
+
+// the board html
+let boardHTML = document.getElementById('landing-table');
+
+/*
+<div class="board-vertical-line line" id="vertical-1"></div>
+<div class="board-vertical-line line" id="vertical-2"></div>
+<div class="board-horizontal-line line" id="horizontal-1"></div>
+<div class="board-horizontal-line line" id="horizontal-2"></div>
+
+*/
 
 
 
@@ -52,7 +85,8 @@ async function clicked(num) {
         if (isWinner(turn)) {
             await new Promise(r => setTimeout(r, 2000));
             increaseScore(turn);
-            deleteAllInput();
+            await deleteAllInput();
+            await boardAppear();
         } else {
             await new Promise(r => setTimeout(r, 400));
             rotateBoard(turn);
@@ -69,6 +103,14 @@ async function clicked(num) {
 
 // delete all x's and o's
 async function deleteAllInput() {
+    gameTable.style.animation = "boardDisappear 0.5s ease-in-out";
+    gameTable.style.animationFillMode = "forwards";
+    await new Promise(r => setTimeout(r, 600));
+    let lines = document.getElementsByClassName('line');
+    lines = Array.prototype.slice.call(lines);
+    for (let i = 0; i < lines.length; i++) {
+        lines[i].remove();
+    }
     for (let i = 0; i < boxes.length; i++) {
         if (boxes[i].hasChildNodes()) {
             boxes[i].removeChild(boxes[i].lastChild); 
@@ -130,4 +172,20 @@ function rotateBoard(turn) {
         page.style.animation = "rotateToX 1s ease-in-out";
         page.style.animationFillMode = "forwards";
     }
+}
+
+// board Appear
+async function boardAppear() {
+    // animation: verticalAnim 1s ease-out;
+    gameTable.style.animation = "boardAppear 0.5s ease-in-out";
+    boardHTML.appendChild(vertical1.cloneNode(true));
+    boardHTML.appendChild(vertical2.cloneNode(true));
+    boardHTML.appendChild(horizontal1.cloneNode(true));
+    boardHTML.appendChild(horizontal2.cloneNode(true));
+    gameTable.style.animationFillMode = "forwards";
+    document.getElementById('vertical-1').style.animation = "verticalAnim 1s ease-out;";
+    document.getElementById('vertical-2').style.animation = "verticalAnim 1s ease-out;";
+    document.getElementById('horizontal-1').style.animation = "horizontalAnim 1s ease-out;";
+    document.getElementById('horizontal-2').style.animation = "horizontalAnim 1s ease-out;";
+    await new Promise(r => setTimeout(r, 1000));
 }

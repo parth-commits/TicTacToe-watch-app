@@ -66,13 +66,13 @@ html{
     
     font-family: 'ManropeBold';
     color: #f2ebd3;
-    font-size: 30px;
+    font-size: 35px;
 }
 #score-name {
     position: relative;
     font-family: 'ManropeRegular';
     color: #087a6f;
-    font-size: 25px;
+    font-size: 20px;
     width: fit-content;
     margin: auto;
 }
@@ -270,5 +270,21 @@ html{
     }
     100% {
         transform: rotate(0deg);
+    }
+}
+@keyframes boardDisappear {
+    from { 
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes boardAppear {
+    from { 
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
