@@ -70,7 +70,7 @@ horizontal2.id = 'horizontal-2';
 // the board html
 let boardHTML = document.getElementById('landing-table');
 
-// the strike
+// the strikes
 let horizontalStrike1 = document.createElement('div');
 horizontalStrike1.classList.add('board-horizontal-strike-line');
 horizontalStrike1.classList.add('strike');
@@ -110,23 +110,6 @@ let diagonalStrike2 = document.createElement('div');
 diagonalStrike2.classList.add('board-diagonal-strike-line');
 diagonalStrike2.classList.add('strike');
 diagonalStrike2.id = 'diagonal-strike-2';
-
-
-
-/*
-
-          <div class="board-horizontal-strike-line strike" id="horizontal-strike-1"></div>
-          <div class="board-horizontal-strike-line strike" id="horizontal-strike-2"></div>
-          <div class="board-horizontal-strike-line strike" id="horizontal-strike-3"></div>
-          <div class="board-vertical-strike-line strike" id="vertical-strike-1"></div>
-          <div class="board-vertical-strike-line strike" id="vertical-strike-2"></div>
-          <div class="board-vertical-strike-line strike" id="vertical-strike-3"></div>
-          <div class="board-diagonal-strike-line strike" id="diagonal-strike-1"></div>
-          <div class="board-diagonal-strike-line strike" id="diagonal-strike-2"></div>
-
-*/
-
-
 
 // On click function
 async function clicked(num) {

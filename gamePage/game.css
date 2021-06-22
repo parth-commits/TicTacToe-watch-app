@@ -8,17 +8,8 @@
     src: url("../assets/fonts/Manrope-Regular.ttf") format("truetype");
 }
 @font-face {
-    font-family: "ManropeMedium";
-    src: url("../assets/fonts/Manrope-Medium.ttf") format("truetype");
-}
-
-@font-face {
     font-family: "ManropeLight";
     src: url("../assets/fonts/Manrope-Light.ttf") format("truetype");
-}
-@font-face {
-    font-family: "ManropeExtraLight";
-    src: url("../assets/fonts/Manrope-ExtraLight.ttf") format("truetype");
 }
 html{
     scroll-behavior: smooth;
@@ -147,20 +138,6 @@ html{
     height: 5px;
     margin: auto;
     animation: horizontalAnim 1s ease-out;
-}
-.board-horizontal-strike-line {
-    width: 0px;
-    height: 5px;
-}
-.strike {
-    top: 0px;
-    position: absolute;
-    background-color: #087a6f;
-}
-#horizontal-strike-2 {
-    top: 83px;
-    width: 170px;
-    animation: horizontalStrikeAnim 0.5s ease-in-out;
 }
 @keyframes horizontalStrikeAnim { 
     from { 
@@ -320,7 +297,6 @@ html{
         width: 230px;
     }
 }
-
 .board-vertical-strike-line {
     width: 7px;
     height: 0px;
@@ -348,13 +324,9 @@ html{
         height: 230px;
     }
 }
-
-
-
-
 .board-diagonal-strike-line {
     width: 0px;
-    height: 7px;
+    height: 8px;
 }
 #diagonal-strike-1 {
     width: 0;

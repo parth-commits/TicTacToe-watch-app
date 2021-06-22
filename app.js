@@ -20,7 +20,6 @@ async function runLandingDemo() {
     for (let i = 0; i < boxOrder.length; i++) {
         console.log(i)
         console.log(boxOrder[i]);
-        // console.log(boxes[boxOrder[i]]);
         await new Promise(r => setTimeout(r, i*400));
         boxes[boxOrder[i]].appendChild(inputElement);
         if (inputElement.isEqualNode(x)) {
@@ -36,7 +35,4 @@ async function runLandingDemo() {
     strike.style.backgroundColor = "#545454";
     await new Promise(r => setTimeout(r, 400));
     document.getElementById('landing-table').appendChild(strike);
-    //document.getElementById("horizontal-strike-2").style.width = "170px";
 }
-
-//<div class="board-horizontal-strike-line strike" id="horizontal-strike-2"></div>
